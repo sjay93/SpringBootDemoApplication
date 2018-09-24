@@ -93,7 +93,6 @@ public class User implements Serializable {
      * Sets user detail.
      *
      * @param userDetail the user detail
-     *
      */
     public void setUserDetail(UserDetail userDetail) {
         this.userDetail = userDetail;
