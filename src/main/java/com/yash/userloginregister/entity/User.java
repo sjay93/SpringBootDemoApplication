@@ -54,39 +54,12 @@ public class User implements Serializable {
     }
 
     /**
-     * Gets id.
-     *
-     * @return the id
-     */
-    public int getId() {
-        return id;
-    }
-
-    /**
-     * Sets id.
-     *
-     * @param id the id
-     */
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    /**
      * Gets email.
      *
      * @return the email
      */
     public String getEmail() {
         return email;
-    }
-
-    /**
-     * Sets email.
-     *
-     * @param email the email
-     */
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     /**
@@ -99,30 +72,12 @@ public class User implements Serializable {
     }
 
     /**
-     * Sets user name.
-     *
-     * @param userName the user name
-     */
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    /**
      * Gets password.
      *
      * @return the password
      */
     public String getPassword() {
         return password;
-    }
-
-    /**
-     * Sets password.
-     *
-     * @param password the password
-     */
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     /**
