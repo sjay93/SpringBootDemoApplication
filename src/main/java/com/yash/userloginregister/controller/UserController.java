@@ -64,9 +64,9 @@ public class UserController {
     /**
      * Authenticate user string.
      *
-     * @param userName      the user name
-     * @param password      the password
-     * @param model         the model
+     * @param userName the user name
+     * @param password the password
+     * @param model    the model
      * @return the string
      */
     @PostMapping("/authenticateUser")
@@ -75,9 +75,12 @@ public class UserController {
         user.setUserName(userName);
         user.setPassword(password);
         User user1 = userService.authenticateUser(user);
-        model.addAttribute("firstName", user1.getUserDetail().getFirstName());
-        model.addAttribute("lastName", user1.getUserDetail().getLastName());
-        return "welcome";
+        if (user1 != null) {
+            model.addAttribute("firstName", user1.getUserDetail().getFirstName());
+            model.addAttribute("lastName", user1.getUserDetail().getLastName());
+            return "welcome";
+        }
+        return "login";
     }
 
     /**
