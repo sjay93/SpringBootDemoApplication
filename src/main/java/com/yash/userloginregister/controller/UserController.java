@@ -6,10 +6,10 @@ import com.yash.userloginregister.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.Valid;
 
@@ -64,17 +64,17 @@ public class UserController {
     /**
      * Authenticate user string.
      *
-     * @param user          the user
-     * @param bindingResult the binding result
+     * @param userName      the user name
+     * @param password      the password
      * @param model         the model
      * @return the string
      */
     @PostMapping("/authenticateUser")
-    public String authenticateUser(@Valid @ModelAttribute User user, BindingResult bindingResult, Model model) {
+    public String authenticateUser(@RequestParam String userName, @RequestParam String password, Model model) {
+        User user = new User();
+        user.setUserName(userName);
+        user.setPassword(password);
         User user1 = userService.authenticateUser(user);
-        if (bindingResult.hasErrors()) {
-            return "login";
-        }
         model.addAttribute("firstName", user1.getUserDetail().getFirstName());
         model.addAttribute("lastName", user1.getUserDetail().getLastName());
         return "welcome";
