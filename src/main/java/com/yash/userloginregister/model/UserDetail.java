@@ -5,7 +5,6 @@ import javax.validation.constraints.NotEmpty;
 
 /**
  * The type User detail.
- *
  */
 @Entity
 @Table(name = "userdetails")
