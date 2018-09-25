@@ -75,12 +75,12 @@ public class UserController {
         user.setUserName(userName);
         user.setPassword(password);
         User user1 = userService.authenticateUser(user);
-        if (user1 != null) {
-            model.addAttribute("firstName", user1.getUserDetail().getFirstName());
-            model.addAttribute("lastName", user1.getUserDetail().getLastName());
-            return "welcome";
+        if (user1 == null) {
+            return "login";
         }
-        return "login";
+        model.addAttribute("firstName", user1.getUserDetail().getFirstName());
+        model.addAttribute("lastName", user1.getUserDetail().getLastName());
+        return "welcome";
     }
 
     /**
