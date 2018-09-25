@@ -1,6 +1,6 @@
 package com.yash.userloginregister.repository;
 
-import com.yash.userloginregister.entity.User;
+import com.yash.userloginregister.model.User;
 import org.springframework.data.repository.CrudRepository;
 
 /**

@@ -1,4 +1,4 @@
-package com.yash.userloginregister.entity;
+package com.yash.userloginregister.model;
 
 import org.hibernate.validator.constraints.Length;
 

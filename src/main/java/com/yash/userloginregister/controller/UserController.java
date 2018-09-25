@@ -1,7 +1,7 @@
 package com.yash.userloginregister.controller;
 
-import com.yash.userloginregister.entity.User;
-import com.yash.userloginregister.entity.UserDetail;
+import com.yash.userloginregister.model.User;
+import com.yash.userloginregister.model.UserDetail;
 import com.yash.userloginregister.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

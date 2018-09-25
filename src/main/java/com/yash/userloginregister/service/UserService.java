@@ -1,6 +1,6 @@
 package com.yash.userloginregister.service;
 
-import com.yash.userloginregister.entity.User;
+import com.yash.userloginregister.model.User;
 
 /**
  * The interface User service.

@@ -1,4 +1,4 @@
-package com.yash.userloginregister.entity;
+package com.yash.userloginregister.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;

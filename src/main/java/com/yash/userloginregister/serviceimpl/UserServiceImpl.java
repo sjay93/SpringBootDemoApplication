@@ -1,6 +1,6 @@
 package com.yash.userloginregister.serviceimpl;
 
-import com.yash.userloginregister.entity.User;
+import com.yash.userloginregister.model.User;
 import com.yash.userloginregister.repository.UserRepository;
 import com.yash.userloginregister.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
