@@ -78,8 +78,7 @@ public class UserController {
         if (user1 == null) {
             return "login";
         }
-        model.addAttribute("firstName", user1.getUserDetail().getFirstName());
-        model.addAttribute("lastName", user1.getUserDetail().getLastName());
+        model.addAttribute("user", user1.getUserDetail());
         return "welcome";
     }
 

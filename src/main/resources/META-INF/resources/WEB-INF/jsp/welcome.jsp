@@ -11,6 +11,6 @@
         <title>Welcome to my page</title>
     </head>
     <body>
-        Welcome ${firstName} ${lastName} to my Spring Page
+        Welcome ${user.firstName} ${user.lastName} with ${user.phoneNumber} to my Spring Page
     </body>
 </html>
