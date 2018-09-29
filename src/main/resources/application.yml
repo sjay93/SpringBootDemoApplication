@@ -1,0 +1,38 @@
+security:
+  oauth2:
+    client:
+      accessTokenUri: https://dev-474237.oktapreview.com/oauth2/default/v1/token
+      userAuthorizationUri: https://dev-474237.oktapreview.com/oauth2/default/v1/authorize
+      scope: openid profile email
+    resource:
+      userInfoUri: https://dev-474237.oktapreview.com/oauth2/default/v1/userinfo
+      tokenInfoUri: https://dev-474237.oktapreview.com/oauth2/default/v1/introspect
+      preferTokenInfo: false
+    sso:
+      loginPath: /authorization-code/callback
+
+okta:
+  oauth2:
+    issuer: https://dev-474237.oktapreview.com/oauth2/default
+    clientId: 0oageuep4cCtUziQJ0h7
+    clientSecret: ndq9-uE6a66IXHSkinLS5osxPa-tlc4l31o5TCzK
+
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/userdb
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddlAuto: none
+      use-new-id-generator-mappings: false
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+
+server:
+  port: 8082
